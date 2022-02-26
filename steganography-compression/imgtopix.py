@@ -2,6 +2,7 @@ from ast import For
 from PIL import Image
 
 image=Image.open('testimage.jpg')
+image.show()
 def manipulation(image):
     width,height = image.size
     new_image=Image.new("RGB",(width,height),"white")
