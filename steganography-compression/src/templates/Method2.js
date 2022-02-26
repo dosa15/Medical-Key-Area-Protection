@@ -1,4 +1,4 @@
-import { React, Component } from "react";
+import React, { Component } from "react";
 
 class Method2 extends Component {
     constructor(props) {

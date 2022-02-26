@@ -1,4 +1,4 @@
-import { React, Component, useState, useCallback, useEffect } from "react";
+import React, { Component, useState, useCallback, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 
 import script from '../python/method1.py';
