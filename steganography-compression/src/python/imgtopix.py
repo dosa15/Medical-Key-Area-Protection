@@ -21,7 +21,7 @@ def lcm(x,y):
 
 
 one=Image.open('testimage.jpg')
-two= Image.open('final.jpg')
+two= Image.open('two2.jpg')
 one.show()
 two.show()
 def manipulation(first, second):
@@ -36,9 +36,9 @@ def manipulation(first, second):
                 b_=0
                 g_=0
             else:
-                r_=r1/r
-                g_=g1/g
-                b_=b1/b
+                r_=r1*r
+                g_=g1*g
+                b_=b1*b
 
             new_pixel=(int(r_),int(g_),int(b_))
             new_image.putpixel((x,y),new_pixel)
