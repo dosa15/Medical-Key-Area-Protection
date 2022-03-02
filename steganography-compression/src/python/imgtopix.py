@@ -4,20 +4,24 @@ from functools import reduce
 from math import gcd
 
 def lcm(x,y):
-    try:
+    if(x==0) or (y==0):
+        if(x>y):
+            lcm=x
+        else:
+            lcm=y
+       
+    else:
         if(x>y):
             greater = x
         else:
             greater = y
+        
         while(True):
             if((greater%x==0) and (greater%y==0)):
                 lcm=greater
                 break
             greater=greater+1
-        return lcm
-    except:
-        print("")
-    
+    return lcm
 
 
 one=Image.open('testimage.jpg')
@@ -31,14 +35,9 @@ def manipulation(first, second):
         for y in range(height):
             r,g,b =first.getpixel((x,y))
             r1,g1,b1= second.getpixel((x,y))
-            if(r==0) or (g==0) or (b==0):
-                r_=0
-                b_=0
-                g_=0
-            else:
-                r_=r1*r
-                g_=g1*g
-                b_=b1*b
+            r_=lcm(r,r1)
+            g_=lcm(g,g1)
+            b_=lcm(b,b1)
 
             new_pixel=(int(r_),int(g_),int(b_))
             new_image.putpixel((x,y),new_pixel)
