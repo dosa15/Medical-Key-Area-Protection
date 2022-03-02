@@ -10,7 +10,6 @@ from rsa import encrypt
 docxpath = sys.argv[1]
 destpath = './tmp/'
 intmpath = "word/media/"
-cmppath = './output/'
 
 
 def get_document_text(path):
@@ -55,7 +54,7 @@ def steganography_text2img(image_array):
 
 if __name__ == '__main__':
     docText = get_document_text(docxpath)
-    print(docText)
+    # print(docText)
     images = get_document_images(docxpath, destpath)
 
     image1 = Image.open(destpath + images[0])
@@ -65,6 +64,6 @@ if __name__ == '__main__':
 
     output = Image.fromarray(image1_array)
     output.show()
-    output_filename = images[0].split('/')[-1]
-    output.save(destpath + 'compressed/op1_' + output_filename)
+    output_filetype = images[0].split('/')[-1].split('.')[-1]
+    output.save(destpath + 'compressed/op1_' + docxpath.split('.')[0] + '.' + output_filetype)
     np.save('key.npy', encryption_key)
