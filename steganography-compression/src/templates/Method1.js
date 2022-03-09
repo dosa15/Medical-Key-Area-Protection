@@ -85,9 +85,12 @@ const Method1 = () => {
                     </form>
                 </div>
                 <br />
-                {/* <div className="" style={{border: '1px solid black'}}>
+                <div className="row" style={{border: '1px solid black'}}>
                     {output}
-                </div> */}
+                    {
+                        console.log(output)
+                    }
+                </div>
                 <div className="pdf-container">
                     {
                         viewPDFFile && <>

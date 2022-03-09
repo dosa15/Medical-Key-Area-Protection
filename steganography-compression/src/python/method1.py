@@ -1,10 +1,12 @@
 import random
 
-def func():
+def main():
     print("Testing")
     a = random.randint(1,10)
     b = random.randint(1,10)
     print("Random Sum:", a+b)
+    return (a + b)
 
-if __name__ == "__main__":
-    func()
+# if __name__ == "__main__":
+#     main()
+main()
