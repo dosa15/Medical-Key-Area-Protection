@@ -25,7 +25,7 @@ def lcm(x,y):
     return lcm
 
 
-one=Image.open('testimage.jpg')
+one=Image.open('two1.jpg')
 two= Image.open('two2.jpg')
 one.show()
 two.show()
