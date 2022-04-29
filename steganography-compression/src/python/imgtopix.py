@@ -26,7 +26,7 @@ def lcm(x,y):
 
 
 one=Image.open('two1.jpg')
-two= Image.open('dice.jpg')
+two= Image.open('two2.jpg')
 one.show()
 two.show()
 def manipulation(first, second):
