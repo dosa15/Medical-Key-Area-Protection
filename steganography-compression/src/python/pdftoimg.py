@@ -7,7 +7,7 @@ def convert(file, outputDir):
     if not os.path.exists(outputDir):
         os.makedirs(outputDir)
 
-    pages = convert_from_path(file,poppler_path=r'C:\Program Files\poppler-0.68.0\bin')
+    pages = convert_from_path(file, poppler_path=r'C:\Program Files\poppler-0.68.0\bin')
     counter =1
     for page in pages:
         myfile=outputDir+'output'+str(counter)+'.jpg'
