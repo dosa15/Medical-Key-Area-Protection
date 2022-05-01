@@ -20,19 +20,19 @@ for x in range(0,width,frame_size):
         # r,g,b = testimage.putpixel((x,y),(r1,b1,g1))
         # r1,g1,b1 =testimage.putpixel((x+1,y+1),(rt,bt,gt))
     
-        # for i in range(0,frame_size-1):
-        #     for j in range(0,frame_size-1):
-        #         try:
-        #             if (width-x <= frame_size) or (height-y <= frame_size):
-        #                 break
-        #             p1 = testimage_array[x+i, y+j]
-        #             p2 = testimage_array[abs(i-frame_size)+x, abs(j-frame_size)+y]
+        for i in range(0,frame_size-1):
+            for j in range(0,frame_size-1):
+                try:
+                    if (width-x <= frame_size) or (height-y <= frame_size):
+                        break
+                    p1 = testimage_array[x+i, y+j]
+                    p2 = testimage_array[abs(i-frame_size)+x, abs(j-frame_size)+y]
 
-        #             testimage_array[abs(i-frame_size)+x, abs(j-frame_size)+y] = p1
-        #             testimage_array[x+i, y+j] = p2
-        #         except:
-        #             print(x, y, i, j)
-        testimage_array[x:x+frame_size, y:y+frame_size] = np.swapaxes(testimage_array[x:x+frame_size, y:y+frame_size], 0, 1)
+                    testimage_array[abs(i-frame_size)+x, abs(j-frame_size)+y] = p1
+                    testimage_array[x+i, y+j] = p2
+                except:
+                    print(x, y, i, j)
+        # testimage_array[x:x+frame_size, y:y+frame_size] = np.swapaxes(testimage_array[x:x+frame_size, y:y+frame_size], 0, 1)
         
 testimage = Image.fromarray(testimage_array)
 # testimage.save('src\python\distorted.jpeg')
