@@ -25,8 +25,8 @@ def lcm(x,y):
     return lcm
 
 
-one=Image.open('two1.jpg')
-two= Image.open('two2.jpg')
+one=Image.open('QR.jpeg')
+two= Image.open('chest_mri.jpeg')
 one.show()
 two.show()
 def manipulation(first, second):
