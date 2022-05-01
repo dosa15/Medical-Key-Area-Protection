@@ -8,6 +8,7 @@ from rsa import encrypt
 def medical_stego_encrypt(input_image_file):
     testimage = Image.open(input_image_file)
     testimage_array = np.asarray(testimage)
+    width, height=testimage.size
 
     arr = testimage_array.flatten(order='C')
     # with np.printoptions(threshold=np.inf):
@@ -62,11 +63,26 @@ def medical_stego_encrypt(input_image_file):
 
     key = np.array([key0, key1, key2, mode_pixel], dtype=object)
     np.save('key.npy', key)
-
     output = Image.fromarray(testimage_array)
     output.show()
     output_image_file = input_image_file.split('.')[0] + "_stego.png"
     output.save(output_image_file)
+    
+    frame_size = 31
+    for x in range(0,width,frame_size):
+        for y in range(0,height,frame_size):
+            for i in range(0,frame_size-1):
+                for j in range(0,frame_size-1):
+                    if (width-x <= frame_size) or (height-y <= frame_size):
+                        break
+                    p1 = testimage_array[x+i, y+j]
+                    p2 = testimage_array[abs(i-frame_size)+x, abs(j-frame_size)+y]
+
+                    testimage_array[abs(i-frame_size)+x, abs(j-frame_size)+y] = p1
+                    testimage_array[x+i, y+j] = p2
+
+    output = Image.fromarray(testimage_array)
+    output.show()
 
 if __name__ == '__main__':
     input_image_file = "chest_mri.jpeg"
