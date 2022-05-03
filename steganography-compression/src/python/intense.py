@@ -17,13 +17,14 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # the area of the image with the largest intensity value
 (minVal, maxVal, minLoc, maxLoc) = cv2.minMaxLoc(gray)
 cv2.circle(img, maxLoc, 5, (255, 0, 0), 2)
+cv2.circle(img, minLoc, 5, (0, 255, 0), 2)
 # display the results of the naive attempt
 print(maxLoc)
 cv2.imshow("Naive", img)
 cv2.waitKey(0)
-maxLoc=tuple([x-60 for x in maxLoc])
 Scanreport= Image.open('dental.jpeg')
 QRimage= Image.open('QR.jpeg')
+maxLoc = (int(maxLoc[0]-QRimage.size[0]/2), int(maxLoc[1]-QRimage.size[1]/2))
 
 Scanreport.paste(QRimage,maxLoc)
 Scanreport.show()

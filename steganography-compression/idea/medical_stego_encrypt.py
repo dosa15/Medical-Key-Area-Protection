@@ -38,7 +38,7 @@ def medical_stego_encrypt(input_image_file):
         for i in range(testimage_array.shape[1]):
             for j in range(testimage_array.shape[0]):
                 if testimage_array[i, j][1] == mode_pixel:
-                    key.append([i,j])
+                    key1.append([i,j])
                     x = ord(diagnostic_text.pop())
                     # print(chr(x), end='')
                     testimage_array[i, j][1] = x
@@ -52,7 +52,7 @@ def medical_stego_encrypt(input_image_file):
         for i in range(testimage_array.shape[1]):
             for j in range(testimage_array.shape[0]):
                 if testimage_array[i, j][2] == mode_pixel:
-                    key.append([i,j])
+                    key2.append([i,j])
                     x = ord(diagnostic_text.pop())
                     # print(chr(x), end='')
                     testimage_array[i, j][2] = x
