@@ -65,7 +65,7 @@ def medical_stego_encrypt(input_image_file):
     np.save('key.npy', key)
     output = Image.fromarray(testimage_array)
     output.show()
-    output_image_file = input_image_file.split('.')[0] + "_stego.png"
+    output_image_file = input_image_file.split('.')[0] + "_processed.png"
     output.save(output_image_file)
     
     frame_size = 31

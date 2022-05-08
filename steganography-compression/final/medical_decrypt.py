@@ -3,7 +3,6 @@ import qrcode
 import numpy as np
 from PIL import Image
 from pyzbar.pyzbar import decode
-from medical_stego_encrypt import KAS
 import ast
 import cv2
 
@@ -62,7 +61,7 @@ def medical_stego_decrypt(med_img_file, diagnostic_file):
 
 
 if __name__ == "__main__":
-    med_img_file = "chest_mri_stego.png"
+    med_img_file = "chest_mri_processed.png"
     diagnostic_file = "diagnostic_decrypted.txt"
     medical_stego_decrypt(med_img_file, diagnostic_file)
 

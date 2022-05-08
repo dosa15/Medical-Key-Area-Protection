@@ -45,5 +45,5 @@ def medical_stego_decrypt(input_image_file):
     output.save(output_image_file)
 
 if __name__ == "__main__":
-    input_image_file = "chest_mri_stego.png"
+    input_image_file = "chest_mri_processed.png"
     medical_stego_decrypt(input_image_file)

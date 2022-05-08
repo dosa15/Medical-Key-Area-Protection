@@ -123,7 +123,7 @@ def medical_stego_encrypt(med_img_file, diagnostic_file):
     key = np.array(key, dtype=object)
     np.save("key.npy", key)
     output = Image.fromarray(med_img_array)
-    output_image_file = med_img_file.split('.')[0] + "_stego.png"
+    output_image_file = med_img_file.split('.')[0] + "_processed.png"
     output.save(output_image_file)
     output.show()
 
