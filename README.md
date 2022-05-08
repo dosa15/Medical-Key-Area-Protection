@@ -1,6 +1,6 @@
 Medical Images Key Area Protection using Steganography
 
-Base Paper reference: [https://www.researchgate.net/publication/339097600_Reversible_Data_Hiding_Based_Key_Region_Protection_Method_in_Medical_Images](url)
+Base Paper reference: [https://ieeexplore.ieee.org/abstract/document/8983086](url)
 DOI: [http://dx.doi.org/10.1109/BIBM47256.2019.8983086](url)
 
 Initial idea:
