@@ -1,4 +1,4 @@
-Medical Images Key Area Protection using Steganography
+Medical Images Key Area Protection using Pixel Manipulation
 
 Base Paper reference: [https://ieeexplore.ieee.org/abstract/document/8983086](url)   
 
