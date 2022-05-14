@@ -1,6 +1,7 @@
 Medical Images Key Area Protection using Steganography
 
-Base Paper reference: [https://ieeexplore.ieee.org/abstract/document/8983086](url) \ 
+Base Paper reference: [https://ieeexplore.ieee.org/abstract/document/8983086](url)   
+
 DOI: [http://dx.doi.org/10.1109/BIBM47256.2019.8983086](url)
 
 Initial idea:
